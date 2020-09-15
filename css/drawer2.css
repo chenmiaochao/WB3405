@@ -1,0 +1,148 @@
+/* チェックボックスを非表示 */
+.menu-checkbox {
+  display: none;
+}
+@media (max-width:559px){
+/* 左上メニューボタン*/
+.menu_btn {
+  display: block;
+  position: fixed;
+  /*top,left,bottom,rightなどで配置場所を変更 */
+  top: 20px;
+  left: 20px;
+  z-index: 300;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+.menu_btn::before,
+.menu_btn::after,
+.menu_btn span {
+  display: block;
+  position: absolute;
+  left: 0;
+  /*線のデザイン*/
+  width: 100%;
+  height: 3px;
+  background-color: #000000;
+  /*中央線の位置調整*/
+  margin-top: -2px;
+}
+.menu_btn::before {
+  top: 0;
+}
+.menu_btn::after {
+  bottom: 0;
+}
+.menu_btn span {
+  top: 50%;
+}
+.menu_btn::before,
+.menu_btn::after {
+  content: '';
+  transition: 0.3s;/*アニメーションの速度*/
+}
+/* メニューボタンのアニメーション */
+.menu-checkbox:checked ~ .menu_btn::before {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.menu-checkbox:checked ~ .menu_btn::after {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+.menu-checkbox:checked ~ .menu_btn span {
+  display: none;
+}
+
+
+
+/* ドロワーメニューの装飾 */
+.drawer-menu {
+  position: fixed;
+  /*配置場所とサイズ*/
+  top: 0px;
+  left: 0;
+  z-index: 200;
+  width: 250px;
+  height: 100%;
+  padding-top: 50px;
+  /*ドロワーの方向XまたはY*/
+  transform: translateY(100%);
+  transition: .5s;
+  background-color: #fff;
+}
+/* ドロワーメニューの開閉 */
+.menu-checkbox:checked ~ .drawer-menu {
+  transform: translateX(0);
+}
+
+.drawer-menu li {
+  /*リストメニューのボーダー*/
+  border-bottom: 1px dotted #ccc;
+}
+.drawer-menu a {
+  /*メニューの文字設定*/
+  display: block;
+  padding: 15px;
+  color: #000000;
+  text-decoration: none;
+}
+
+
+
+/* ドロワーメニューの背景部分 */
+.menu-back {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  /*オーバーレイする部分の背景*/
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.menu-checkbox:checked ~ .menu-back {
+  display: block;
+}
+
+/*headerやロゴ部分*/
+  header{
+    padding: 2vmax;
+    background-color: #b9e2ea;
+  }
+  #logo{
+    text-align: center;
+
+  }
+}
+
+@media (min-width:560px){
+/*上部メニュー例*/
+  header{
+    /* padding: 2vmax 2vmax 1vmax; */
+    /* background-color: #b9e2ea; */
+    
+  }
+  #logo{
+    width: 10%;
+    height: 5vh;
+  }
+  nav ul{
+    /* display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-around; */
+  }
+  nav li{
+    /* flex: 0 1 50%; */
+  }
+  nav a{
+    display: block;
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 160%;
+    /* background-color: #fff; */
+  }
+}

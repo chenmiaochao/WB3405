@@ -1,0 +1,356 @@
+@charset "UTF-8";
+body{
+    width: 100%;
+    height: 100%;
+	margin: 0 auto;
+	background-color: gainsboro;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-family: 'Roboto', sans-serif;
+}
+.none{
+    display: none;
+}
+.hidden {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+header{
+	width: 100%;
+	padding-bottom: 50%;
+	background-image: url("../imgs/slider001.png");
+	background-repeat: no-repeat;
+    background-position: center center;
+/*	background-size: cover;*/
+	/* margin: 0 auto; */
+}
+#logo{
+    background-image: url("../imgs/cat01.png");
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    text-align: center;
+	z-index: 3;
+	padding-top: 2em;
+  }
+nav{
+	clear:left;
+	height: 90px;
+	width: 100%;
+	border-radius: 2em 2em 0 0;
+	z-index: 99;
+}
+nav ul{
+	/* display: flex; */
+	justify-content: space-around;
+}
+nav ul li{
+	margin: auto 1%;
+	border-radius: 40px;
+	line-height: 3;
+	/* font-size: 150%; */
+	width: 90%;
+	text-align: center;
+	align-content: center;
+	/* background: linear-gradient(#edb066 , #e0bf6d); */
+}
+/*折り畳みコントロールを非表示*/
+nav input{
+	display: none;
+}
+.drop{
+	display: none;
+}
+nav ul li img{
+	width: 90%;
+	height: auto;
+}
+
+.nav-li::before{
+	content: '';
+	display: inline-block;
+	width: 2em;
+	height:2em;
+	background-image: url(../imgs/nekonote.png);
+	background-size: contain;
+	vertical-align: middle;
+}
+.nav-li::after{
+	content: '';
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	background-image: url(../imgs/neko3.png);
+	background-size: contain;
+	vertical-align: middle;
+}
+main,
+article{
+	width: 100%;
+	margin: 0 auto;
+}
+.a-1,
+.a-3,
+.a-4{
+	text-align: center;
+	margin: 0 auto;
+
+}
+
+.a-1 h2{
+	margin: auto 0;
+	width: 50%;
+	height: 25em;
+	left: 20%;
+	background-image: url(../imgs/blob-1.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+}
+.a-1>p{
+	width: 30%;
+	margin: 0 auto;
+	margin-top: -2rem;
+}
+.a-1 .status{
+	padding-top:3em;
+	right: 0.6em;
+	position: relative;
+	font-size: 1.7em;
+}
+.a-1 h3{
+	padding-top: 2em;
+	padding-bottom: 2em;
+	font-size: 1.7em;
+}
+.a-1 h3:first-letter {
+	font-size: 3em;
+	color: #7172ac;
+}
+.a-1 .show-cats{
+	padding-top: 3em;
+	padding-bottom:3em;
+	width: 80%;
+    margin:0 auto;
+    border-radius: 10px;
+	transition: max-height ease-out 2s; 
+
+}
+.a-1 .show-cats .show-cat{
+	margin:0 auto;
+	width: 80%;
+	padding-top:2em;
+	padding-bottom:2em;
+}
+.a-1 .show-cats .show-cat img{
+	height: 100%;
+	width: 100%;
+	border-radius: 5em;
+}
+.show-cats .show-cat p{
+
+	padding-top:0.3em;
+	padding-bottom: 0.5em;
+}
+.show-cats .show-cat p:nth-child(2){
+
+	border-bottom: solid 1px pink;
+	width: 50%;
+	margin: 0 auto;
+
+}
+.a-2{
+	padding: 5%;
+	padding-left: 10%;
+	align-content: center;
+	text-align: center;
+}
+.a-2 ul{
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+	transition: max-height ease-out 2s;
+}
+.a-2 ul li{
+	margin: 4%;
+	border-radius: 40px;
+	line-height: 3;
+	font-size: 150%;
+	text-align: center;
+	align-content: center;
+	background-image: linear-gradient(180deg, #DDD6F3 0%, #ffffff 100%);
+
+}
+.a-2 ul li::after{
+	content: '';
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	background-image: url(../imgs/neko3.png);
+	background-size: contain;
+	vertical-align: middle;
+
+}
+.a-3 {
+	width: 90%;
+}
+.a-3 img{
+	width: 100%;
+}
+.a-4 h2{
+	padding-top: 7em;
+	padding-bottom: 3em;
+	font-size: 1.7em;
+}
+.a-4 h2:first-letter {
+	font-size: 3em;
+	color: #7172ac;
+}
+.a-4 ul{
+	width: 90%;
+	margin:1rem auto;
+	display: grid;
+    /* gap: 10px; */
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+	transition: max-height ease-out 2s; 
+}
+
+.play01{
+	background-image: url(../imgs/image-01.png);
+}
+.play02{
+	background-image: url(../imgs/image-02.png);
+}
+.play03{
+	background-image: url(../imgs/image-03.png);
+}
+.play04{
+	background-image: url(../imgs/image-04.png);
+}
+.play05{
+	background-image: url(../imgs/image-05.png);
+}
+.play06{
+	background-image: url(../imgs/image-06.png);
+}
+.play01,
+.play02,
+.play03,
+.play04,
+.play05,
+.play06{
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: contain;
+
+	padding-top: 11em;
+	width: 10em;
+	height: 10em;
+
+	padding-bottom: 3em;
+	text-align: center;
+	margin:0 auto;
+	/* font-size: 200%; */
+}
+footer p{
+
+	padding-top: 3%;
+	padding-bottom: 3%;
+	color: white;
+	text-align: center;
+}
+
+.fluid01{
+position: relative;
+width: 1000px;
+height: 3600px;
+background: rgba( #BCC7E5, 1 );
+left: -400px;
+top:3200px;
+z-index: -3;
+}
+
+
+.gradation01 {  
+background: radial-gradient(ellipse at center, rgba(225,230,243,0.75) 0%,rgba(188,199,229,0.75) 100%); 
+}
+
+@keyframes rotate01 {
+    0% { transform: rotate( 0 ); }
+    100% { transform: rotate( 300deg ); }
+}
+.a-1{
+	margin-top:-3600px;
+}
+
+.fluid02{
+	position: relative;
+	width: 1000px;
+	height: 3600px;
+	background: pink;
+	left: 200px;
+	top:4000px;
+	z-index: -3;
+}
+	
+.gradation02 {  
+	background-image: linear-gradient(158deg, #FAACA8 0%, #DDD6F3 50%, #ffffff 100%);
+}
+
+/* @keyframes rotate01 {
+	0% { transform: rotate( 0 ); }
+	100% { transform: rotate( 300deg ); }
+} */
+.a-4{
+	margin-top:-3600px;
+	overflow: hidden;
+}
+.rotate {
+	animation: rotate 30s ease 0s infinite normal both;
+	@keyframes rotate {
+	  0% { transform: rotate( 0 ); }
+	  100% { transform: rotate( 360deg ); }
+	}
+}
+
+.fluid03{
+	position: relative;
+	max-width: 1200px;
+	height: auto;
+	z-index: -3;
+}
+	
+.gradation03 {  
+	background-color: #8EC5FC;
+	background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 33%, #b8f0f0 66%, #ffffff 100%);
+	
+}
+#s-3 .s-3-1 h3{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	padding-top: 6em;
+	margin: 0.4rem;
+}
+#s-3 .s-3-1 li{
+	width: 90%;
+	margin: 1em auto;
+	display: flex;
+	text-align: center;
+	background: #FFDED4;
+	border-radius: 2em;
+}
+#s-3 .s-3-1 li p{
+	margin: auto 1em;
+	color: gray;
+	text-align: left;
+}
+.s-3-1-1{
+	background-image: url("../imgs/pla01.webp");
+}
+.s-3-1-2{
+	background-image: url("../imgs/pla02.webp");
+}
+.s-3-1-3{
+	background-image: url("../imgs/pla03.webp");
+}

@@ -1,0 +1,79 @@
+.fluid01{
+    top:3700px;
+    width: 800px;
+}
+.a-1>h2{
+    width: 35%;
+    left: 30%;
+}
+.a-1>p{
+	width: 30%;
+	margin: 0 auto;
+}
+.a-1 .status{
+    padding-top:3em;
+    padding-bottom:3em;
+	right: 0.6em;
+	font-size: 1.7em;
+}
+header{
+    position: relative;
+}
+nav li img{
+    width: 7.5em;
+}
+nav ul{
+    /* display: flex; */
+    border-radius: 1.5em 1.5em 0 0;
+    margin: 0 auto;
+    justify-content: space-around;
+    background-color: white;
+    width: 10em;
+    padding-bottom: 3em;
+    text-align: center;
+    align-content: center;
+    position: absolute;
+    left: 3em;
+}
+nav ul li{
+    padding-bottom: 0.5em;
+	margin: auto 3%;
+	border-radius: 40px;
+	line-height: 3;
+	font-size: 150%;
+	width: 90%;
+	text-align: center;
+	align-content: center;
+	/* background: linear-gradient(#edb066 , #e0bf6d); */
+}
+.drop {
+    border-radius: 2em;
+    cursor: pointer;
+    display: block;
+    background-image: url("../imgs/cat01.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    left:3em;
+    width: 10em;
+    height: 10vh;
+    color: white;
+    position: absolute;
+    text-align: center;
+    margin:0 auto;
+    background-color: white;
+}
+.drop + input{
+    display: none; /* hide the checkboxes */
+}
+
+.drop + input + div{
+    display:none;
+}
+
+.drop + input:checked + div{
+    display:block;
+}
+.drawer-menu{
+    position: fixed;
+}
